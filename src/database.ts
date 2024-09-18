@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/trocar-para-nome-do-BD', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+    await mongoose.connect('mongodb://localhost:27017/dados_produtos', {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
     });
     console.log('MongoDB connected');
   } catch (error) {

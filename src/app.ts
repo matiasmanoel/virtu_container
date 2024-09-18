@@ -4,6 +4,8 @@ import productRoutes from './routes/productRoutes';
 import { PORT } from './config';
 import path from 'path';
 import connectDB from './database';
+import cors from 'cors';
+import { addProductController, listProductsController } from './controllers/productController'
 
 const app: Application = express();
 
@@ -11,10 +13,13 @@ const app: Application = express();
 connectDB();
 
 app.use(bodyParser.json());
-app.use('/products', productRoutes);
+// app.use(cors());
+app.post('/', addProductController);
+
+// app.use('/products', productRoutes);
 
 // Serve arquivos estáticos da pasta public
-app.use(express.static(path.join(__dirname, '../public')));
+//app.use(express.static(path.join(__dirname, '../public')));
 
 // Rota para servir o HTML
 app.get('/', (req, res) => {

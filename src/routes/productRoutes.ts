@@ -4,6 +4,6 @@ import { addProductController, listProductsController } from '../controllers/pro
 const router: Router = Router();
 
 router.post('/', addProductController);
-router.get('/', listProductsController);
+router.get('/products', listProductsController);
 
 export default router;

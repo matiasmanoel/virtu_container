@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect('mongodb://localhost:27017/trocar-para-nome-do-BD', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+        yield mongoose_1.default.connect('mongodb://localhost:27017/dados_produtos', {
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
         });
         console.log('MongoDB connected');
     }

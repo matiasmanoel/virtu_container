@@ -16,10 +16,12 @@ exports.listProducts = exports.createProduct = void 0;
 const productModel_1 = __importDefault(require("../models/productModel"));
 const createProduct = (product) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log(product);
         const newProduct = new productModel_1.default(product);
         return yield newProduct.save();
     }
     catch (error) {
+        console.log(error);
         throw new Error('Error creating product: ' + error.message);
     }
 });
